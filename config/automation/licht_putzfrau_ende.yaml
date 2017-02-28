@@ -8,8 +8,8 @@
        - condition: time
          after: '15:30:00'
          before: '19:00:00'
-          weekday: 
-            - tue
+         weekday: 
+           - tue
     action:
        service: homeassistant.turn_on
        entity_id: script.licht_putzfrau_ende

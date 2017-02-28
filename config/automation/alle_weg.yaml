@@ -9,18 +9,18 @@
        condition: or
        conditions:
        - condition: time
-          weekday: 
-            - mon
-            - wed
-            - thu
-            - fri
-            - sat
-            - sun
+         weekday: 
+           - mon
+           - wed
+           - thu
+           - fri
+           - sat
+           - sun
        - condition: time
          after: '19:30:00'
          before: '15:00:00'
-          weekday: 
-            - tue
+         weekday: 
+           - tue
     action:
        service: homeassistant.turn_off
        entity_id: group.all_lights
