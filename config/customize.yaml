@@ -6,4 +6,5 @@
     
   binary_sensor.bewegungssensor_sensor_2_0:
     polling_interval: 1000
+    entity_picture: /local/ms_icon.jpg
  
