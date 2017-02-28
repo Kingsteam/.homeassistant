@@ -2,5 +2,8 @@ dasher_oral_b:
     alias: "Dasher Oral-B"
     sequence:
      - service: script.turn_on
-       data:
-         entity_id: script.guten_morgen
+       data_temple:
+         entity_id: {% if is_state('light.imac_lampe', 'on' %} script.schlaflicht {% else %} script.wecklicht {% endif %}
+       
+       
+         

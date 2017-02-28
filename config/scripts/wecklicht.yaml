@@ -1,0 +1,10 @@
+wecklicht:
+   alias: Guten Morgen
+   sequence:
+     - service: light.turn_on
+       data:
+        entity_id: light.imac_lampe
+        brightness: 255
+        color_temp: 500
+        transition: 500
+        rgb_color: [255,255,255]

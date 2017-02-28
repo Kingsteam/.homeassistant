@@ -1,0 +1,10 @@
+schalflicht:
+   alias: Gute Nacht
+   sequence:
+     - service: light.turn_off
+       data:
+        entity_id: light.imac_lampe
+        brightness: 0
+        color_temp: 500
+        transition: 500
+        rgb_color: [255,255,255]
