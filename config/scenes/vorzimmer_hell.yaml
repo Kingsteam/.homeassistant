@@ -1,0 +1,13 @@
+  - name: "Vorzimmer hell"
+    entities:
+        light.vorzimmer:
+            state: on
+            brightness: 254
+            color_temp: 385
+        light.kleiderstaender:
+            state: on
+            brightness: 254
+            color_temp: 385
+        light.lumibaer:
+            state: on
+            brightness: 254

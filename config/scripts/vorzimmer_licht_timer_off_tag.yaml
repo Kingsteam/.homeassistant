@@ -1,0 +1,15 @@
+vorzimmer_licht_timer_off_tag:
+    alias: "Vorzimmer Timer aus (Tag)"
+    sequence:
+     - delay: '00:{{ states.input_slider.licht_dauer_tag.state | int}}:00'
+     - service: homeassistant.turn_off
+       entity_id: 
+        - light.vorzimmer_2
+        - light.kleiderstaender        
+        - light.lumibar        
+     - delay: '00:00:01'
+     - service: homeassistant.turn_off
+       entity_id: 
+        - light.vorzimmer_2
+        - light.kleiderstaender        
+        - light.lumibar

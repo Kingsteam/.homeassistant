@@ -1,0 +1,15 @@
+jarvis_greeting:
+   alias: Jarvis Greeting
+   sequence:
+     - service: tts.google_say
+       data_template:
+         entity_id: media_player.apple_tv
+         message: >
+           {% if now().strftime("%H")|int < 12 %}
+             Guten Morgen!
+           {% elif now().strftime("%H")|int < 18 %}
+             Schönen Nachmittag!
+           {% else %}
+             Guten Abend!
+           {% endif %}
+             Es hat {{states.sensor.zamg_temperature.state|round}} Grad.

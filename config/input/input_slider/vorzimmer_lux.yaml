@@ -1,0 +1,6 @@
+  vorzimmer_lux:
+     name: "Vorzimmer lux"
+     initial: 10
+     min: 0
+     max: 600
+     step: 1 

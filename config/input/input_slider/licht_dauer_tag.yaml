@@ -1,0 +1,6 @@
+  licht_dauer_tag:
+     name: "Dauer Tag"
+     initial: 5
+     min: 0
+     max: 20
+     step: 1 

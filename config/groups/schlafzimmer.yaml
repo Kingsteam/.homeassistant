@@ -1,0 +1,5 @@
+Schlafzimmer:
+    name: schlafzimmer
+    control: hidden
+    entities:
+      - media_player.bose

@@ -1,0 +1,13 @@
+  - alias: "Vorzimmer Licht (Tag)"
+    trigger: 
+     - platform: state
+       entity_id: light.vorzimmer_2
+       from: 'off'
+       to: 'on'
+    condition:
+     - condition: time
+       after: '06:00:00'
+       before: '23:00:00'
+    action:
+       service: homeassistant.turn_on
+       entity_id: script.vorzimmer_licht_timer_off_tag

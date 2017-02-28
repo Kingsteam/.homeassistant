@@ -1,0 +1,49 @@
+
+Tab Wohnzimmer:
+    view: yes
+    name: Wohnzimmer
+    icon: mdi:readability
+    entities:
+      - group.wohnzimmer
+      
+Tab Vorzimmer:
+    view: yes
+    name: Vorzimmer
+    icon: mdi:key
+    entities:
+      - group.vorzimmer
+      
+Tab Schlafzimmer:
+    view: yes
+    name: Schlafzimmer
+    icon: mdi:hotel
+    entities:
+      - group.schlafzimmer
+
+Tab Arbeitszimmer:
+    view: yes
+    name: Arbeitszimmer
+    icon: mdi:briefcase
+    entities:
+      - group.arbeitszimmer
+
+Tab Kuche:
+    view: yes
+    name: Küche
+    icon: mdi:fridge
+    entities:
+      - group.kuche
+      
+Tab Badezimmer:
+    view: yes
+    name: Badezimmer
+    icon: mdi:duck
+    entities:
+      - group.badezimmer
+      
+Tab Automation:
+    view: yes
+    name: Automation
+    icon: mdi:apps
+    entities:
+      - group.automation

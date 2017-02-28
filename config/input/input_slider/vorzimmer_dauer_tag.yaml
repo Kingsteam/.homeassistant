@@ -1,0 +1,6 @@
+  vorzimmer_dauer_tag:
+     name: "Dauer Tag"
+     initial: 3
+     min: 0
+     max: 59
+     step: 1 

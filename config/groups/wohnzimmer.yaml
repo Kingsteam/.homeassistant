@@ -1,0 +1,11 @@
+Wohnzimmer:
+    name: Wohnzimmer
+    control: hidden
+    entities:
+      - group.wohnzimmerlampe
+      - group.fernsehlichter
+      - light.geschirrschrank
+      - media_player.apple_tv
+      - media_player.max2play
+      - media_player.lg_tv_remote
+      - scene.fernsehlicht

@@ -1,0 +1,9 @@
+  group.vorzimmer_relger:
+    icon: mdi:settings
+    
+  media_player.apple_tv:
+    icon: mdi:apple
+    
+  binary_sensor.bewegungssensor_sensor_2_0:
+    polling_interval: 1000
+ 

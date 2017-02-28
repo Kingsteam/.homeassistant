@@ -1,0 +1,13 @@
+Sensoren_Vorzimmer:
+    name: Bewebgungssensor Vorzimmer
+    control: hidden
+    entities:
+     - binary_sensor.bewegungssensor_sensor_4_0
+     - sensor.bewegungssensor_alarm_level_4_1
+     - sensor.bewegungssensor_alarm_type_4_0
+     - sensor.bewegungssensor_burglar_4_10
+     - sensor.bewegungssensor_general_4_0
+     - sensor.bewegungssensor_luminance_4_3
+     - sensor.bewegungssensor_seismic_intensity_4_25
+     - sensor.bewegungssensor_sourcenodeid_4_2
+     - sensor.bewegungssensor_temperature_4_1

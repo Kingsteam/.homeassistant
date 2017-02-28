@@ -1,0 +1,33 @@
+  - platform: pi_hole
+    host: !secret host_pi_hole
+  - platform: sonarr
+    api_key: !secret sonarr_api_key
+    host: !secret sonarr_host
+    port: !secret sonarr_port
+    monitored_conditions:
+      - upcoming
+    days: 2
+  - platform: zamg
+    station_id: 11035
+    monitored_conditions:
+      - temperature
+  - platform: sabnzbd
+    host: !secret sabnzb_host
+    port: !secret sabnzb_port
+    api_key: !secret sabnzb_api_key
+    monitored_variables:
+     - 'current_status'
+  - platform: time_date
+    display_options:
+     - 'time'
+     - 'date'
+#  - platform: waqi
+#    locations:
+#      - vienna
+#    stations:
+#      - ecke-taborstrasse-glockengasse
+  - platform: google_travel_time
+    name: Büroweg Christian
+    api_key: !secret google_travel_api_key
+    origin: zone.home
+    destination: zone.itsv    

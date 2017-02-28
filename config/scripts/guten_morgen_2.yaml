@@ -1,0 +1,15 @@
+guten_morgen_2:
+   alias: Guten Morgen 2
+   sequence:
+     - delay: 
+        seconds: 30
+     - service: light.turn_on
+       data:
+        entity_id: light.imac_lampe
+        brightness: 128
+        color_temp: 400
+        transition: 30
+        rgb_color: [255,255,255]
+     - service: script.turn_on
+       data:
+         entity_id: script.guten_morgen_3

@@ -1,0 +1,13 @@
+  - alias: "Vorzimmer Licht Fernsehen"
+    trigger:
+      - platform: state
+        entity_id: media_player.lg_tv_remote
+        to: 'playing'
+    condition:
+       condition: sun
+       after: sunset
+    action:
+       service: input_slider.select_value
+       data:
+         entity_id: input_slider.licht_dauer_tag
+         value: 1

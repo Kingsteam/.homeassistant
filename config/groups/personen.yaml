@@ -1,0 +1,5 @@
+Personen:
+    name: Personen
+    entities:
+     - device_tracker.christian
+     - device_tracker.peter

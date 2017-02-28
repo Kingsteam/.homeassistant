@@ -1,0 +1,98 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 163
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Vienna
+  customize: !include config/customize.yaml
+
+# Show links to resources in log and frontend
+# introduction: 
+
+# Enables the frontend
+frontend:
+
+config:
+
+http:
+    api_password: !secret api_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /srv/homeassistant/lib/python3.4/site-packages/libopenzwave-0.3.2-py3.4-linux-armv7l.egg/config/
+#  polling_interval: 2000
+  
+light:
+  platform: hue
+  host: !secret hue_host
+  allow_unreachable: true
+  allow_in_emulated_hue: true
+  allow_hue_groups: true
+#  scan_interval: 2
+
+  
+# Text to speech
+tts:
+  - platform: google
+    language: 'de'
+media_player:
+  - platform: lg_netcast
+    host: !secret lg_host
+    access_token: !secret lg_access_token
+  - platform: soundtouch
+    host: !secret bose_host
+    name: Bose
+  - platform: squeezebox
+    host: !secret squeezebox_host
+
+device_tracker:
+  - platform: bluetooth_tracker
+    interval_seconds: 15 
+  - platform: locative  
+
+alarm_control_panel:
+  - platform: manual
+
+proximity:
+  home: 
+    devices:
+    - device_tracker.christian
+    - device_tracker.peter
+    tolerance: 10
+    
+zone: !include_dir_merge_list config/zones/
+input_select: !include_dir_merge_named config/input/input_select/
+input_slider: !include_dir_merge_named config/input/input_slider/
+input_boolean: !include_dir_merge_named config/input/input_boolean/
+script: !include_dir_merge_named config/scripts/  
+sensor: !include_dir_merge_list config/sensors/
+scene: !include_dir_merge_list config/scenes/
+group: !include_dir_merge_named config/groups/
+automation: !include_dir_merge_list config/automation/

@@ -1,0 +1,12 @@
+  - name: Fernsehlicht
+    entities:
+        light.esstisch:
+            state: on
+            brightness: 137
+        light.fernsehlampe:
+            state: on
+            brightness: 188
+            color_temp: 385
+        light.gi:
+            state: on
+            brightness: 254

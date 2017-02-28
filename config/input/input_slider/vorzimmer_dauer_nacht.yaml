@@ -1,0 +1,6 @@
+  vorzimmer_dauer_nacht:
+     name: "Dauer Nacht"
+     initial: 1
+     min: 0
+     max: 59
+     step: 1 

@@ -1,0 +1,7 @@
+Fernsehlichter:
+    name: Fernsehlichter
+    icon: mdi:television
+    entities:
+    - light.gi
+    - light.fernsehlampe
+    - light.esstisch

@@ -1,0 +1,10 @@
+  - alias: nodon_test
+    trigger:
+      - platform: event
+        event_type: zwave.scene_activated
+        event_data:
+          entity_id: nodon_crc3100_octan_remote_8
+          scene_id: 10  
+    action:
+       service: homeassistant.turn_on
+       entity_id: script.guten_morgen

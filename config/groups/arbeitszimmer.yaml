@@ -1,0 +1,5 @@
+Arbeitszimmer:
+    name: Arbeitszimmer
+    control: hidden
+    entities:
+      - light.arbeitszimmer

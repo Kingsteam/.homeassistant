@@ -1,0 +1,6 @@
+Vorzimmerlichter:
+    name: Vorzimmerlichter
+    entities:
+      - light.vorzimmer_2
+      - light.kleiderstaender
+      - light.lumibaer

@@ -1,0 +1,7 @@
+  vorzimmer_scene:
+     name: "Vorzimmer Licht"
+     options:
+       - "Party"
+       - "Hell"
+       - "Zeitgesteuert"
+     initial: "Zeitgesteuert"

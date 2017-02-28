@@ -1,0 +1,7 @@
+Vorzimmer_Relger:
+    name: Licht Vorzimmer
+    control: hidden
+    entities:
+     - input_select.vorzimmer_scene
+     - input_slider.licht_dauer_tag
+     - input_slider.licht_dauer_abend

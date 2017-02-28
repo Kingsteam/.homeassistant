@@ -1,0 +1,13 @@
+  - alias: "Vorzimmer Sensor (Tag)"
+    trigger: 
+     - platform: state
+       entity_id: binary_sensor.bewegungssensor_sensor_4_0
+       from: 'off'
+       to: 'on'
+    condition:
+     - condition: time
+       after: '06:00:00'
+       before: '23:00:00'
+    action:
+       service: homeassistant.turn_on
+       entity_id: script.vorzimmer_licht_timer_on_tag

@@ -1,0 +1,4 @@
+Badezimmer:
+    name: Badezimmer
+    control: hidden
+    entities:

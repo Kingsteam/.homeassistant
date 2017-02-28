@@ -1,0 +1,5 @@
+Vorzimmer:
+    name: Vorzimmer
+    entities:
+      - group.vorzimmerlichter
+      - group.vorzimmer_relger

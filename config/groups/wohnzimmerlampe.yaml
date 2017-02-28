@@ -1,0 +1,8 @@
+Wohnzimmerlampe:
+    name: Wohnzimmerlampe
+    icon: mdi:spotlight-beam
+    view: no
+    entities:
+    - light.wohnzimmer_spot_1
+    - light.wohnzimmer_spot_2
+    - light.wohnzimmer_spot_3

@@ -1,0 +1,17 @@
+ - name: ITSV
+   latitude: !secret itsv_latitude
+   longitude: !secret itsv_longitude
+   radius: 250
+   icon: mdi:worker
+  
+ - name: Stiftskaserne
+   latitude: !secret stiftskaserne_latitude
+   longitude: !secret stiftskaserne_longitude
+   radius: 250
+   icon: mdi:worker
+
+ - name: Home
+   latitude: !secret home_latitude
+   longitude: !secret home_longitude
+   radius: 50
+   icon: mdi:account-multiple

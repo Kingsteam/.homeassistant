@@ -1,0 +1,24 @@
+vorzimmer_licht_timer_on_abend:
+    alias: "Vorzimmer Timer an (Abend)"
+    sequence:
+      # Cancel ev. old timers
+      - service: homeassistant.turn_off
+        entity_id: 
+         - script.vorzimmer_licht_timer_off_abend
+      - service: homeassistant.turn_off
+        entity_id: 
+         - script.vorzimmer_licht_timer_off_tag
+      - service: light.hue_activate_scene
+        data_template:
+          group_name: "Vorzimmer"
+          scene_name: >
+           {% if is_state("input_select.vorzimmer_scene", "Party") %}  
+             Party
+           {%-elif is_state("input_select.vorzimmer_scene", "Hell") %}  
+             Hell
+           {%-elif is_state("input_select.vorzimmer_scene", "Zeitgesteuert") %}  
+             Bewegung Nacht
+           {% endif %}
+      - service: homeassistant.turn_on
+        entity_id: 
+         - script.vorzimmer_licht_timer_off_abend

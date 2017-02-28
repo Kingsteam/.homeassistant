@@ -1,0 +1,12 @@
+Automation:
+    name: Automation
+    entities:
+      - automation.fernsehen
+      - automation.bewegungssensor
+      - automation.vorzimmer_licht_abend
+      - automation.vorzimmer_licht_tag
+      - automation.vorzimmer_sensor_abend
+      - automation.vorzimmer_sensor_tag
+      - automation.guten_morgen
+      - automation.vorzimmer_licht_fernsehen
+      

@@ -1,0 +1,6 @@
+dasher_oral_b:
+    alias: "Dasher Oral-B"
+    sequence:
+     - service: script.turn_on
+       data:
+         entity_id: script.guten_morgen

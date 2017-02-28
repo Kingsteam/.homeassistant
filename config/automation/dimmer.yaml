@@ -1,0 +1,30 @@
+#  - alias: Dimmer
+#    trigger:
+#      - platform: state
+#        entity_id: sensor.dimmer
+#        to: "1002"
+#    condition:
+#       condition: group.fernsehlichter
+#       state: off
+#    action:
+#        service: scene.turn_on  
+#        entity_id: scene.fernsehlicht
+#  - alias: Dimmer Off
+#    trigger:
+#      - platform: state
+#        entity_id: sensor.dimmer
+#        to: "1002"
+#    condition:
+#       condition: group.fernsehlichter
+#       state: on
+#    action:
+#        service: scene.turn_off  
+#        entity_id: scene.fernsehlicht
+#  - alias: Arbeitszimmer
+#    trigger:
+#      - platform: state
+#        entity_id: sensor.dimmer
+#        to: "4002"
+#    action:
+#        service: light.turn_off  
+#        entity_id: light.arbeitszimmer

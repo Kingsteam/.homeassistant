@@ -1,0 +1,7 @@
+party:
+    alias: "Partybeleuchtung"
+    sequence:
+     - service: light.hue_activate_scene
+       data:
+         group_name: "Wohnzimmer"
+         scene_name: "Party"
