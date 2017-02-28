@@ -1,0 +1,10 @@
+licht_putzfrau_ende:
+    alias: "Licht Putzfrau Ende"
+    sequence:
+     - service: homeassistant.turn_on
+       entity_id: 
+         - automation.vorzimmer_licht_abend
+         - automation.vorzimmer_licht_tag
+         - automation.vorzimmer_licht_fernsehen
+         - automation.vorzimmer_sensor_abend
+         - automation.vorzimmer_sensor_tag

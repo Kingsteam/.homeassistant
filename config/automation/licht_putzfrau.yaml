@@ -1,0 +1,15 @@
+  - alias: "Licht Putzfrau"
+    trigger: 
+     - platform: state
+       entity_id: binary_sensor.bewegungssensor_sensor_4_0
+       from: 'off'
+       to: 'on'
+    condition:
+     - condition: time
+       after: '15:00:00'
+       before: '18:00:00'
+       weekday: 
+        - tue
+    action:
+       service: homeassistant.turn_on
+       entity_id: script.licht_putzfrau
