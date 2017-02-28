@@ -1,0 +1,26 @@
+  - alias: "Alle weg"
+    trigger: 
+     - platform: state
+       entity_id: device_tracker.christian, device_tracker.peter
+       state: 'not_home'
+       for: 
+         minutes: 10
+    condition:
+       condition: or
+       conditions:
+       - condition: time
+          weekday: 
+            - mon
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+       - condition: time
+         after: '19:30:00'
+         before: '15:00:00'
+          weekday: 
+            - tue
+    action:
+       service: homeassistant.turn_off
+       entity_id: group.all_lights
